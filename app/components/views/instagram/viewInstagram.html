@@ -1,0 +1,49 @@
+<div class="main-section" role="main">
+	<section class="container-fluid">
+		
+		<h1 class="page-heading"><i class="icon fa fa-instagram"></i> {{ title }}</h1>
+
+		<div class="instagram-post">
+
+			<article class="article entry" ng-repeat="post in posts | startFrom: pagination.page * pagination.perPage | limitTo: pagination.perPage" data-post-id="{{ post.id }}">
+
+				<div class="col-xs-12 col-sm-4 col-md-3">
+					<div class="insta-card thumbnail">
+					<img src="{{ post.images.low_resolution.url }}" alt="" width="{{ post.images.width }}" height="{{ post.images.height }}">
+						<div class="caption">
+							<h2 class="caption-text">{{ post.caption.text }}</h2>
+							<!-- <p class="date">Posted on : {{ post.created_time | date : 'MMMM dd, yyyy' }}</p> -->
+							<p class="location">Location : {{ post.location.name ? post.location.name : 'Not Available'}}</p>
+						</div>
+					</div>
+				</div>
+
+			</article>
+
+			<div class="clearfix"></div>
+
+			<div class="paingation-container">
+				
+				<ul class="pagination">
+					<li>
+						<a href="" ng-class="{ deactivate : pagination.page <= 0 }" ng-click="prevPage()">&laquo; Prev</a>
+					</li>
+					<!-- <li ng-repeat="n in [] | range: 100" ng-class="{active: n == pagination.page}">
+						<a href="" ng-click="pagination.toPageId(n)">{{n + 1}}</a>
+					</li> -->
+					<li>
+						<a href="" class="display-only">{{ pagination.page + 1 }} / {{ pagination.numPages }}</a>
+					</li>
+					<li>
+						<a href="" ng-class="{ deactivate : pagination.page >= pagination.numPages - 1 }" ng-click="nextPage()">Next &raquo;</a>
+					</li>
+				</ul>
+
+				<span class="page-reading">{{ pagination.page + 1 }} / {{ pagination.numPages }}</span>
+
+			</div>
+
+		</div>
+		
+	</section>
+</div>

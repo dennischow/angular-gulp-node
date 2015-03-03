@@ -1,0 +1,26 @@
+<div class="main-section" role="main">
+
+	<div class="ui-control-panel">
+		<button class="ui-btn btn-back" back-button>
+			<span class="sr-only">Back</span>
+			<i class="icon fa fa-arrow-left"></i>
+		</button>
+	</div>
+
+	<section class="container-fluid">
+		
+		<h1 class="page-heading">{{ title }}</h1>
+		
+		<div class="blog-post blog-post-details">
+
+			<article class="article entry" data-post-id="{{ post.entry_id }}">
+				<h2 class="title">{{ post.title }}</h2>
+				<p class="date"><i class="icon fa fa-clock-o"></i> {{ post.entry_date | date : 'MMMM dd, yyyy' }}</p>
+				<p class="body" ng-bind-html="post.blog_body">{{ post.blog_body }}</p>
+				<!-- <p class="button-container"><a class="btn-readmore" href="#/blog/{{ post.id }}">Read More</a></p> -->
+			</article>
+
+		</div>
+		
+	</section>
+</div>

@@ -1,0 +1,78 @@
+<!-- https://scotch.io/tutorials/angularjs-best-practices-directory-structure -->
+<!DOCTYPE html>
+<html lang="en" ng-app="webApp">
+<head>
+<meta charset="UTF-8">
+<title>{{ title }}</title>
+
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+<meta name="format-detection" content="telephone=no">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black">
+
+<!-- Google Web Font -->
+<link rel="stylesheet" type='text/css' media="screen" href='http://fonts.googleapis.com/css?family=Bitter:400,700'>
+
+<!-- build:css-app -->
+<!-- <link rel="stylesheet" type='text/css' media="screen" href="assets/css/master-style.css"> -->
+<!-- endbuild  -->
+
+<link rel="stylesheet" type='text/css' media="screen" href="assets/css/master-libs.css">
+<link rel="stylesheet" type='text/css' media="screen" href="assets/css/master-style.css">
+
+</head>
+<body>
+
+
+<!--Page View Start-->
+<div id="page-view" class="{{ pageClass }}">
+
+
+	<!--Navigation Starts-->
+	<nav class="site-navigation" site-navigation>
+		<h1 class="bradning"><a href="#/home"><span class="sr-only">Brand</span><i class="icon fa fa-html5"></i></a></h1>
+		<ul class="navigation">
+			<li><a href="#/home" ng-class=" (pageClass == 'page-home') ? 'active' : '' "><span class="sr-only">Home</span><i class="icon fa fa-home"></i></a></li>
+			<li><a href="#/blog" ng-class=" (pageClass == 'page-blog' || pageClass === 'page-blog page-blog-details' ) ? 'active' : '' "><span class="sr-only">Blog</span><i class="icon fa fa-rss"></i></a></li>
+			<li><a href="#/instagram" ng-class=" (pageClass == 'page-instagram') ? 'active' : '' "><span class="sr-only">Instagram</span><i class="icon fa fa-instagram"></i></a></li>
+		</ul>
+		<button class="ui-btn close-menu btn btn-default" role="button"><span class="sr-only">Menu</span><i class="icon fa fa-times"></i></button>
+		<button class="ui-btn open-menu btn btn-default" role="button"><span class="sr-only">Menu</span><i class="icon fa fa-bars"></i></button>
+	</nav>
+	<!--Navigation Ends-->
+
+
+	<!--Content View Starts-->
+	<ng-view></ng-view>
+	<!--Content View Ends-->
+
+
+</div>
+<!--Page View Ends-->
+
+
+<script type="text/javascript" src="assets/js/master-libs.js"></script>
+<script type="text/javascript" src="assets/js/master-script.js"></script>
+<script type="text/javascript" src="app/master-app.js"></script>
+
+
+<!-- build:js-libs  -->
+<!-- <script type="text/javascript" src="assets/js/bundle.js"></script>
+<script type="text/javascript" src="bower_components/angular/angular.js"></script>
+<script type="text/javascript" src="bower_components/angular-route/angular-route.js"></script>
+<script type="text/javascript" src="bower_components/angular-animate/angular-animate.js"></script>
+<script type="text/javascript" src="bower_components/angular-sanitize/angular-sanitize.js"></script>
+<script type="text/javascript" src="bower_components/ng-simplePagination/simplePagination.js"></script> -->
+<!-- endbuild -->
+
+
+
+<!-- build:js-app  -->
+<!-- <script type="text/javascript" src="app/_app.js"></script>
+<script type="text/javascript" src="app/_directives.js"></script>
+<script type="text/javascript" src="app/_services.js"></script>
+<script type="text/javascript" src="app/_controllers.js"></script> -->
+<!-- endbuild -->
+
+</body>
+</html>

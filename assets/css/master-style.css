@@ -1,0 +1,216 @@
+/*********************************
+// Global
+*********************************/
+BODY {
+  /*padding-top: 70px;*/
+  /*overflow: scroll;*/
+  overflow-y: scroll;
+  font-family: 'Bitter', serif;
+}
+IMG {
+  display: block;
+  width: 100%;
+  max-width: 960px;
+  height: auto;
+}
+/*********************************
+// Common Elements
+*********************************/
+.ui-btn {
+  position: fixed;
+  display: inline-block;
+  padding: 0;
+  width: 30px;
+  height: 30px;
+  font-size: 13px;
+  text-align: center;
+  background-color: rgba(0, 0, 0, 0.7);
+  -webkit-border-radius: 50%;
+  border-radius: 50%;
+  color: white;
+}
+.ui-btn.btn-back {
+  right: 15px;
+  top: 15px;
+  border: none;
+}
+.paingation-container {
+  text-align: left;
+}
+.paingation-container .page-reading {
+  position: fixed;
+  bottom: 30px;
+  right: 15px;
+  padding: 5px 10px;
+  background-color: rgba(0, 0, 0, 0.4);
+  color: white;
+  font-size: 10px;
+  -webkit-border-radius: 2px;
+  border-radius: 2px;
+}
+.paingation-container .display-only,
+.paingation-container .deactivate {
+  pointer-events: none;
+}
+.paingation-container .deactivate {
+  opacity: 0.5;
+}
+.page-heading {
+  /*display: none;*/
+  margin: 0 auto 20px;
+  padding-bottom: 20px;
+  color: #DDD;
+  text-align: center;
+  border-bottom: 1px #DDD dotted;
+}
+/*********************************
+// Layout
+*********************************/
+#page-view {
+  overflow-x: hidden;
+}
+.main-section {
+  padding-left: 60px;
+  background-color: #F2F2F2;
+  -webkit-transition: padding-left 0.2s ease-in-out;
+  transition: padding-left 0.2s ease-in-out;
+}
+.container-fluid {
+  padding-top: 20px;
+  padding-bottom: 20px;
+  max-width: 1024px;
+  background-color: white;
+}
+/*********************************
+// Site Navigation
+*********************************/
+.site-navigation {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 60px;
+  height: 100%;
+  background-color: black;
+  -webkit-transition: left 0.2s ease-in-out;
+  transition: left 0.2s ease-in-out;
+}
+.site-navigation .bradning {
+  margin: 0;
+  padding: 0;
+  text-align: center;
+}
+.site-navigation .bradning A {
+  display: block;
+  /*height: 50px;*/
+  /*line-height: 50px;*/
+  padding: 20px 0;
+  background-color: #FF8C00;
+  font-size: 12px;
+  color: black;
+  font-size: 40px;
+  border-bottom: 1px #FF8C00 solid;
+}
+.site-navigation .navigation {
+  margin: 0;
+  padding: 0;
+}
+.site-navigation .navigation A {
+  display: block;
+  /*padding: 15px 0;*/
+  margin: 20px auto 0;
+  width: 40px;
+  height: 40px;
+  background-color: transparent;
+  color: white;
+  font-size: 24px;
+  color: #FF8C00;
+  line-height: 40px;
+  -webkit-border-radius: 50%;
+  border-radius: 50%;
+  -webkit-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+}
+.site-navigation .navigation A.active,
+.site-navigation .navigation A:active,
+.site-navigation .navigation A:hover {
+  color: black;
+  background-color: #FF8C00;
+}
+.site-navigation .navigation LI {
+  text-align: center;
+}
+.site-navigation .ui-btn {
+  display: none;
+  position: fixed;
+  right: 15px;
+  top: 15px;
+}
+/*********************************
+// Instagram Page
+*********************************/
+.instagram-post .insta-card {
+  /*max-width: 306px;*/
+}
+.instagram-post .caption-text,
+.instagram-post .date,
+.instagram-post .location {
+  margin: 0;
+  width: 100%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.instagram-post .caption-text {
+  font-size: 20px;
+  color: #999;
+}
+.instagram-post .location {
+  margin-top: 5px;
+  font-size: 12px;
+  color: #999;
+}
+/*********************************
+// Blog Page
+*********************************/
+.blog-post .title {
+  /*color: #FF8C00;*/
+  font-size: 24px;
+}
+/*.blog-post .date {
+	font-size: 18px;
+}*/
+.blog-post .body {
+  line-height: 1.8em;
+}
+.blog-post .body IMG {
+  margin: 1em auto;
+}
+.blog-post .button-container {
+  margin-bottom: 20px;
+}
+.blog-post .button-container .icon {
+  margin-left: 5px;
+}
+.blog-post .thumbnail-cover {
+  display: block;
+  margin: 1em auto;
+  width: 100%;
+  max-width: 960px;
+  height: 200px;
+  background-color: #EEE;
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+}
+.blog-post .entry + .entry {
+  border-top: 1px #CCC solid;
+}
+.blog-post.blog-post-details .title,
+.blog-post.blog-post-details .date {
+  text-align: center;
+}
+.blog-post.blog-post-details .title {
+  /*font-size: 32px;*/
+}
+/* Medium devices (desktops, 992px and down) */
+/* Medium devices (desktops, 768px and down) */
